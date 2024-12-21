@@ -1,0 +1,4 @@
+Sample data for the project:
+- User data
+- Configuration details
+- Miscellaneous notes
