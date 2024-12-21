@@ -24,6 +24,18 @@
     
     <button type="submit">Submit</button>
         </form>
+        <script>
+            document.querySelector('form').addEventListener('submit', (event) => {
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+        
+                if (!name || !email || !message) {
+                    alert('Please fill out all fields before submitting.');
+                    event.preventDefault();
+                }
+            });
+        </script>
     </main>
     <footer>
         <p>&copy; 2024 Contact Page</p>
