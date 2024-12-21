@@ -1,7 +1,7 @@
 # Basic Python script for demonstration
 
 def farewell_user(name):
-    """
+    
     Returns a farewell message for the given user.
 
     Args:
@@ -9,7 +9,7 @@ def farewell_user(name):
 
     Returns:
         str: A farewell message.
-    """
+    
     return f"Goodbye, {name}! See you next time."
 
 if __name__ == "__main__":
