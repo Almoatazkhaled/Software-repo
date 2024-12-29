@@ -14,40 +14,38 @@
         <p>Please reach out to us using the form below.</p>
         <form>
             <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Your Full Name" required><br><br>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="example@domain.com" required><br><br>
-    
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" placeholder="Write your message here..." rows="5" cols="30" required></textarea><br><br>
-    
-    <button type="submit">Submit</button>
-        </form>
-        <script>
-            document.querySelector('form').addEventListener('submit', (event) => {
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const message = document.getElementById('message').value.trim();
+            <input type="text" id="name" name="name" placeholder="Your Full Name" required><br><br>
         
-                if (!name || !email || !message) {
-                    alert('Please fill out all fields before submitting.');
-                    event.preventDefault();
-                }
-            });
-        </script>
-<p>Please reach out to us using the form below.</p>
-<form>
-    ...
-</form>
-<section>
-    <h2>Other Contact Options</h2>
-    <p>Email: support@example.com</p>
-    <p>Phone: +123-456-7890</p>
-</section>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@domain.com" required><br><br>
+        
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" placeholder="Write your message here..." rows="5" cols="30" required></textarea><br><br>
+        
+            <button type="submit">Submit</button>
+        </form>
+        
+        <section>
+            <h2>Other Contact Options</h2>
+            <p>Email: support@example.com</p>
+            <p>Phone: +123-456-7890</p>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Contact Page</p>
     </footer>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', (event) => {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+    
+            if (!name || !email || !message) {
+                alert('Please fill out all fields before submitting.');
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
