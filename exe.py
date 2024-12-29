@@ -2,6 +2,9 @@
 from datetime import datetime
 
 def greet(name):
+    if not name.isalpha():
+        raise ValueError("Name should only contain alphabets")
+    
     hour = datetime.now().hour
     if hour < 12:
         return f"Good morning, {name}!"
@@ -11,9 +14,13 @@ def greet(name):
         return f"Good evening, {name}!"
 
 def farewell(name):
+    if not name.isalpha():
+        raise ValueError("Name should only contain alphabets")
     return f"Goodbye, {name}!"
 
 if __name__ == "__main__":
-    print(greet("World"))
-    print(farewell("World"))
-
+    try:
+        print(greet("World"))
+        print(farewell("World"))
+    except ValueError as e:
+        print(e)
